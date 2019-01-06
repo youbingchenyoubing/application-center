@@ -18,7 +18,7 @@
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.RC1</spring-cloud.version>
 		<docker.plugin.version>1.2.0</docker.plugin.version>
-		<docker.image.prefix>youbingchenyoubing</docker.image.prefix>
+		<docker.image.prefix>just-do-it</docker.image.prefix>
 
 	</properties>
 
@@ -81,7 +81,8 @@
 			<include>${project.build.finalName}.jar</include>
 			</resource>
 			</resources>
-				<serverId>docker-hub</serverId>
+				<serverId>alicloud</serverId>
+                <registryUrl>https://registry.cn-hangzhou.aliyuncs.com</registryUrl>
 				<pushImages>true</pushImages>
 				<forceTags>true</forceTags>
 			</configuration>
