@@ -1,0 +1,50 @@
+
+spring:
+    application:
+        name: application-center
+    profiles:
+      active:
+        - dev
+server:
+    port: 8761 #启动端口
+
+security:
+  basic:
+   enabled: true
+
+  user:
+    name: justdoit
+    password: justdoit@everything.com
+
+---
+spring:
+  profiles: dev
+
+eureka:
+
+  server:
+    enable-self-preservation: true
+  instance:
+    prefer-ip-address: false
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+     defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+
+
+---
+spring:
+  profiles: docker
+eureka:
+  server:
+    enable-self-preservation: false
+  instance:
+    hostname: ${spring.applicationame}
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false # 表示是否从EureKa server 获取注册信息
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
