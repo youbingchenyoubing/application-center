@@ -14,7 +14,16 @@ security:
 
   user:
     name: justdoit
-    password: justdoit@everything.com
+    password: justdoit@everything.com # to do encrypt
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
 
 ---
 spring:
@@ -32,6 +41,8 @@ eureka:
     fetch-registry: false
     service-url:
      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
 
 
 ---
@@ -41,10 +52,12 @@ eureka:
   server:
     enable-self-preservation: false
   instance:
-    hostname: ${spring.applicationame}
+    hostname: ${spring.application.name}
     prefer-ip-address: true
   client:
     register-with-eureka: false
     fetch-registry: false # 表示是否从EureKa server 获取注册信息
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health

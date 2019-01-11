@@ -83,8 +83,7 @@
 			<include>${project.build.finalName}.jar</include>
 			</resource>
 			</resources>
-
-			<pushImages>true</pushImages>
+				
 			<forceTags>true</forceTags>
 			</configuration>
 			</plugin>
