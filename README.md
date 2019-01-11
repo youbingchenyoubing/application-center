@@ -10,3 +10,8 @@
 [安装Docker, get.docker.io 被墙的解决办法](https://blog.csdn.net/sunshingheavy/article/details/53868244)
 
 [国内 docker 仓库镜像对比](https://ieevee.com/tech/2016/09/28/docker-mirror.html#%E9%80%89%E6%8B%A9%E4%BA%8Cdaocloud)
+
+
+```cmd
+docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
+```

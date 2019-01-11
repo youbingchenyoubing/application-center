@@ -35,8 +35,8 @@
 		</dependency>
 		<!-- 用户认证  -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-security</artifactId>
 		</dependency>
 	</dependencies>
 

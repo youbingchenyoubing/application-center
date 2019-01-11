@@ -2,19 +2,16 @@
 spring:
     application:
         name: application-center
+    security:
+      user:
+        name: just-do-it
+        password: just-do-it@everything.com # to do encrypt
     profiles:
       active:
         - dev
 server:
     port: 8761 #启动端口
 
-security:
-  basic:
-   enabled: true
-
-  user:
-    name: justdoit
-    password: justdoit@everything.com # to do encrypt
 
 management:
   endpoints:
