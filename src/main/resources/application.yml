@@ -5,7 +5,7 @@ spring:
     security:
       user:
         name: just-do-it
-        password: just-do-it@everything.com # to do encrypt
+        password: just-do-it-for-everything # to do encrypt
     profiles:
       active:
         - dev
