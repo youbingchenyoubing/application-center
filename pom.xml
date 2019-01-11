@@ -72,7 +72,7 @@
 			</execution>
 			</executions>
 			<configuration>
-			<serverId>alicloud</serverId>
+			<!--<serverId>alicloud</serverId>-->
 			<registryUrl>https://registry.cn-hangzhou.aliyuncs.com</registryUrl>
 			<imageName>${docker.image.prefix}/${project.build.finalName}:${project.version}</imageName>
 			<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
